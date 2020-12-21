@@ -1,0 +1,121 @@
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+    .sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  </style>
+
+<nav class="navbar navbar-expand-lg  " style="margin-top: 40px;background-color: rgb(197, 124, 90);height: 60px;">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+  aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <div class="navbar-nav mr-auto">   
+    
+        <div class="nav-item ">
+          <a class=" dropdown-toggle"  
+           id="navbarDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;font-size: 20px;margin-left: 450px;padding-right:-200px;background-color:rgb(197, 124, 90); font-weight: bold;">
+            Women
+          </a>
+       
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: 400px;width: 700px;text-align: center;background-color: rgb(15, 15, 15);color: rgb(216, 202, 9);font-weight: bolder;">
+               
+               <a class="dropdown-item" href="http://localhost:5200/Products/Tops" style="color: white;">Tops</a>
+               <a class="dropdown-item" href="http://localhost:5200/Products/Dresses" style="color: white;">Dresses</a>
+               <a class="dropdown-item" href="http://localhost:5200/Products/Jeans" style="color: white;">Jeans</a>
+               <a class="dropdown-item" href="http://localhost:5200/Products/Sweaters" style="color: white;">Sweaters</a>
+             </div>
+         </div>
+         <div class="nav-item ">
+          <a class=" dropdown-toggle"  href=""
+           id="navbarDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;font-size: 20px;margin-left: 450px;padding-right:-200px;background-color:rgb(197, 124, 90); font-weight: bold;">
+            Men
+          </a>
+       
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: 400px;width: 700px;text-align: center;background-color: rgb(15, 15, 15);color: rgb(216, 202, 9);font-weight: bolder;">
+               
+               <a class="dropdown-item" href="http://localhost:5200/Products/T-shirts" style="color: white;">T-shirts</a>
+               <a class="dropdown-item" href="http://localhost:5200/Products/Pants" style="color: white;">Pants</a>
+               <a class="dropdown-item" href="http://localhost:5200/Products/Jackets" style="color: white;">Jackets</a>
+               <a class="dropdown-item" href="http://localhost:5200/Products/Shirts" style="color: white;">Shirts</a>
+             </div>
+         </div>
+      </div>
+   </div>
+</nav>
+
+
+<div class="main" style="margin-top: 80px;margin-right: 150px;">
+  
+  
+      <div class="row "  >
+        <div class="col-3" *ngFor=" let product of products" >
+          <div class="card mb-4 shadow-sm">
+           <a href="http://localhost:5200/Details/5fcc8faec16e86a8e824321d/{{product._id}}/{{product.title}}/{{product.desc}}/{{product.price}}"><img class="card-img-top" src="{{product.image}}" alt=""></a>
+            <div class="card-body" style="height: 100px;">
+              <p class="card-text" style="font-weight: bold;">{{product.title}}</p>
+              
+              <p class="card-text" style="font-weight: 500;">{{product.price | currency : "₹"}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group" >
+                  
+                 
+                  <br>
+                  
+                </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+        </div>

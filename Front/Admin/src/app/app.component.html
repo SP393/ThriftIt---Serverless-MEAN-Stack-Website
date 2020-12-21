@@ -1,0 +1,122 @@
+<style>
+ 
+      
+
+      .container-fluid {
+          overflow: hidden;
+          
+          background: #262626;
+          color: #627482 !important;
+          margin-bottom: 0;
+          padding-bottom: 0;
+          margin-top: -10px;
+          height: 300px;
+      }
+     
+      small {
+          font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important
+      }
+     
+      .bold-text {
+          color: #989c9e !important
+      }
+     
+      .mt-55 {
+          margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
+      }
+     
+      h3 {
+          font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important
+      }
+     
+      .social {
+          font-size: 21px !important
+      }
+     
+      .rights {
+          font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
+      }
+</style>
+
+
+<nav class="navbar navbar-expand-lg  fixed-top" style="background-color: rgb(25, 54, 92);height: 100px;">
+      <div class="container" style="color:rgb(216, 204, 204);">
+        
+    
+        <a class="navbar-brand" href="#" style="color: rgb(209, 202, 202)"><h3 class=" mb-md-0 mb-5 bold-text" style="font-weight: bolder;font-size: 50px;color: rgb(209, 202, 202);margin-left: 200px;">ThriftIt.</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" >
+              <a class="nav-link" routerLink=""  >
+                <span class="sr-only">(current)</span>
+              </a>
+               </li>
+               
+               <li class="nav-item active">
+                <a class="nav-link" routerLink="/Admin/Area"  >
+                  <span class="sr-only">(current)</span>
+                </a>
+                 </li>
+                </ul>
+                <ul class="navbar-nav" style="font-size: 16px;margin-left: 100px;">
+                  <a class="nav-link"  href="http://localhost:5200/Home" routerLinkActivate="active" style="color: rgb(209, 202, 202);">Home</a>
+                  <a class="nav-link" style="cursor: pointer;" style="color: rgb(209, 202, 202)" routerLink="/All/Types" >Categories</a>           
+                  <a class="nav-link" style="cursor: pointer;" style="color: rgb(209, 202, 202)" routerLink="/All/Category">Sub-Categories</a>
+                  <a class="nav-link" style="cursor: pointer;" style="color: rgb(209, 202, 202)" routerLink="/All/Product">Products</a>
+                  
+                  <a class="nav-link" style="cursor: pointer;" style="color: rgb(209, 202, 202)" >Logout</a>
+   
+        
+                </ul>
+            </div>
+          </div>
+        </nav>
+    
+      <router-outlet></router-outlet>
+      
+      
+      <div class="container-fluid pb-0 mb-0 justify-content-center text-light " style="margin-top: 100px;">
+        <footer>
+      <div class="row my-5 justify-content-center py-5">
+        <div class="col-11">
+            <div class="row ">
+                <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                    <h3 class="text-muted mb-md-0 mb-5 bold-text">ThriftIt.</h3>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                    <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
+                    <ul class="list-unstyled">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Blog</li>
+                        <li>Portfolio</li>
+                    </ul>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                    <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b> EMAIL-ADDRESS</b></h6>
+                    <p class="mb-1">Thrift@gmail.com</p>
+                    <br>
+                    <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b> Contact</b></h6>
+                    <p class="mb-1">+91 9978654456</p>
+  
+                    
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                    <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span> </p><small class="rights"><span>&#174;</span> Pepper All Rights Reserved.</small>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
+                    <h6 class="mt-55 mt-2 text-muted bold-text"><b>ANIRUDH SINGLA</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span> anirudh@gmail.com</small>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end mt-3 ">
+                    <h6 class="text-muted bold-text"><b>RISHABH SHEKHAR</b></h6><small><span><i class="fa fa-envelope" aria-hidden="true"></i></span> rishab@gmail.com</small>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+  </div>

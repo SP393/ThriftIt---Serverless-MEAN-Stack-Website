@@ -1,0 +1,32 @@
+<div class ="container" style="margin-top: 200px;">
+    
+    <h2 style="text-decoration: underline;"> SUB-CATEGORIES</h2>
+    <br>
+    <br>
+    <a href="/Add/Category" class="btn btn-primary" style="background-color:rgb(26, 70, 105);">Add a new sub-category</a>
+<br><br>
+
+    
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>Sub-Category</th>
+            <th>Category</th>
+            <th>Delete</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+    
+       
+            <tr *ngFor="let category of categories">
+                <td>{{category.title}}</td>
+                <td>{{category.type}}</td>
+            <td (click)= "deleteCategory(category._id)"><button class="btn btn-" style="background-color: red;"><a style="color: black;" class="confirmDeletion" href="/All/Category">Delete</a></button></td>
+            
+        </tr>
+      
+    </tbody>
+</table>
+    </div>

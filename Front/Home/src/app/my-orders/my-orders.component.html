@@ -1,0 +1,37 @@
+
+<div class="container mb-4" style="margin-top: 120px;">
+
+  
+<table class="table">
+  
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let cart of carts'>
+        <th scope="row">1</th>
+        <td>{{cart.title}}</td>
+        <td>{{cart.quantity}}</td>
+        <td>₹{{cart.price}}</td>
+        <td  class="text-right"><a class="btn btn-sm btn-danger" (click)= "deleteCart(cart._id)" href="http://localhost:5200/myOrders/5fcc8faec16e86a8e824321d" style="height: 25px;">Cancel</a> </td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+  <div class="col mb-2">
+    <div class="row">
+        <div class="col-sm-12  col-md-6">
+            <button class="btn btn btn-light" routerLink="/Home" routerLinkActivate="active" style="background-color: rgb(24, 59, 92);color: white;">Continue Shopping</button>
+        </div>
+    </div>
+  </div>
+</div>
+  
+  

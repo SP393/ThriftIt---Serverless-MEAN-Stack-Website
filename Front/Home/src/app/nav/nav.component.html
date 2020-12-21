@@ -1,0 +1,69 @@
+
+
+
+
+  
+
+
+  
+<nav class="navbar navbar-expand-lg  fixed-top" style="background-color: rgb(25, 54, 92);height: 100px;">
+
+  <div class="dropdown"  *ngIf="auth.Adminlog()" style="margin-right: 30px;">
+    <button type="button" class="btn btn dropdown-toggle" data-toggle="dropdown" style="margin-right: 50px;margin-top: 50px;background-color: rgb(230, 220, 220);">
+      
+      <span class="icon-bar"></span>
+    </button>
+    <div class="dropdown-menu" style="background-color:rgb(25, 54, 92) ;color: white;height: 150px;">
+      <a class="dropdown-item"  href="http://localhost:5200/myOrders/5fcc8faec16e86a8e824321d" style="color: white;">My Orders</a>
+      <a class="dropdown-item" href="http://localhost:5200/myProfile/5fd9f98f32faf8cedd847be0"  style="color: white;" >My Profile</a>
+      
+    </div>
+  </div>
+  
+  <div class="container" style="color:rgb(216, 204, 204);">
+    
+      
+     
+    <a class="navbar-brand" href="#" style="color: rgb(248, 245, 245)"><h3 class=" mb-md-0 mb-5 bold-text" style="font-weight: bolder;font-size: 50px;color: rgb(212, 207, 207);margin-left: 200px;">ThriftIt.</h3></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active" >
+          <a class="nav-link" routerLink=""  >
+            <span class="sr-only">(current)</span>
+          </a>
+           </li>
+           
+           <li class="nav-item active">
+            <a class="nav-link" routerLink="/Admin/Area" routerLinkActivate="active" style="color: rgb(209, 202, 202);" *ngIf="auth.Adminlog()" >
+              <span class="sr-only">(current)</span>
+            </a>
+             </li>
+            </ul>
+            <ul class="navbar-nav" style="font-size: 18px;margin-left: 100px;">
+              
+              <a class="nav-link"  routerLink="/Home" routerLinkActivate="active" style="color: rgb(209, 202, 202);">Home</a>
+              <a class="nav-link"  routerLink="/Home" routerLinkActivate="active" style="color: rgb(209, 202, 202);">About Us</a>
+              <a class="nav-link"  routerLink="/Home" routerLinkActivate="active" style="color: rgb(209, 202, 202);">Contact</a>
+              <a class="nav-link" *ngIf="!auth.Adminlog() && !_auth.AdminloggedIn()" routerLink="/login" routerLinkActivate="active" style="color: rgb(209, 202, 202);">Login</a>
+              <a class="nav-link" *ngIf="!auth.Adminlog() && !_auth.AdminloggedIn()" routerLink="/register" routerLinkActivate="active" style="color: rgb(209, 202, 202);">Register</a>
+              
+              <a class="nav-link" style="cursor: pointer;" *ngIf="auth.Adminlog()" (click)="auth.logout()" routerLink="/Home" routerLinkActivate="active" style="color:rgb(209, 202, 202);">Logout </a>
+              <a class="nav-link" style="cursor: pointer;" *ngIf="auth.Adminlog()"  style="color:rgb(209, 202, 202);"> </a>
+              <a  href="http://localhost:5200/MyCart/5fcc8faec16e86a8e824321d" style="color: rgb(209, 202, 202);margin-left: 10px;margin-top: 5px;"><svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+              </svg><span class="badge badge-danger" >{{totalRows}}</span></a>
+<a class="nav-link" style="cursor: pointer;" *ngIf="_auth.AdminloggedIn()" (click)="_auth.Adminlogout()" routerLink="/Home" routerLinkActivate="active" style="color: rgb(209, 202, 202)" >Logout</a>
+
+    <a class="nav-link" *ngIf="!auth.Adminlog() && !_auth.AdminloggedIn()" routerLink="/Admin/login" routerLinkActivate="active" style="color:rgb(209, 202, 202);margin-left: 10px;">Admin</a>
+    <a class="nav-link" style="cursor: pointer;" *ngIf="_auth.AdminloggedIn()"  href="http://localhost:4200/All/Types"  style="color: rgb(209, 202, 202)" >Admin</a>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    

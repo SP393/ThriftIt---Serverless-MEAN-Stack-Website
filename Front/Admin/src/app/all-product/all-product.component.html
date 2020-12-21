@@ -1,0 +1,38 @@
+<div class ="container" style="margin-top: 100px;">
+    
+    <h2 style="text-decoration: underline;">Products</h2>
+    <br>
+    <br>
+    <a href="/Add/Product" class="btn btn-primary" style="background-color: rgb(33, 55, 88);">Add a new product</a>
+<br><br>
+
+    
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>Product Image</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Delete</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+    
+       
+            <tr *ngFor="let product of products">
+                <td><img style="width: 100px;" class="pic" src="{{product.image}}"></td>
+                <td>{{product.title}}</td>
+                <td> {{product.price | currency : "Rs."}}</td>
+                <td>{{product.category}}</td>
+            
+            <td (click)= "deleteProduct(product._id)"><button class="btn btn-" style="background-color: red;"><a style="color: black;" class="confirmDeletion" href="/All/Product">Delete</a></button></td>
+            
+        </tr>
+      
+    </tbody>
+</table>
+    </div>
+

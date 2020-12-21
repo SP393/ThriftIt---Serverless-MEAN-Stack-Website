@@ -1,0 +1,258 @@
+
+<style>
+.bloc_left_price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+}
+.category_block li:hover {
+    background-color: #007bff;
+}
+.category_block li:hover a {
+    color: #ffffff;
+}
+.category_block li a {
+    color: #343a40;
+}
+.add_to_cart_block .price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    margin-bottom: 0;
+}
+.add_to_cart_block .price_discounted {
+    color: #343a40;
+    text-align: center;
+    text-decoration: line-through;
+    font-size: 140%;
+}
+.product_rassurance {
+    padding: 10px;
+    margin-top: 15px;
+    background: #ffffff;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+}
+.product_rassurance .list-inline {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.product_rassurance .list-inline li:hover {
+    color: #343a40;
+}
+.reviews_product .fa-star {
+    color: gold;
+}
+</style>
+<nav class="navbar navbar-expand-lg  " style="margin-top: 40px;background-color: rgb(197, 124, 90);height: 60px;">
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+    aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <div class="navbar-nav mr-auto">   
+      
+          <div class="nav-item ">
+            <a class=" dropdown-toggle"  
+             id="navbarDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;font-size: 20px;margin-left: 450px;padding-right:-200px;background-color:rgb(197, 124, 90); font-weight: bold;">
+              Women
+            </a>
+         
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: 400px;width: 700px;text-align: center;background-color: rgb(15, 15, 15);color: rgb(216, 202, 9);font-weight: bolder;">
+                 
+                 <a class="dropdown-item" href="http://localhost:5200/Products/Tops" style="color: white;">Tops</a>
+                 <a class="dropdown-item" href="http://localhost:5200/Products/Dresses" style="color: white;">Dresses</a>
+                 <a class="dropdown-item" href="http://localhost:5200/Products/Jeans" style="color: white;">Jeans</a>
+                 <a class="dropdown-item" href="http://localhost:5200/Products/Sweaters" style="color: white;">Sweaters</a>
+               </div>
+           </div>
+           <div class="nav-item ">
+            <a class=" dropdown-toggle"  href=""
+             id="navbarDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;font-size: 20px;margin-left: 450px;padding-right:-200px;background-color:rgb(197, 124, 90); font-weight: bold;">
+              Men
+            </a>
+         
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: 400px;width: 700px;text-align: center;background-color: rgb(15, 15, 15);color: rgb(216, 202, 9);font-weight: bolder;">
+                 
+                 <a class="dropdown-item" href="http://localhost:5200/Products/T-shirts" style="color: white;">T-shirts</a>
+                 <a class="dropdown-item" href="http://localhost:5200/Products/Pants" style="color: white;">Pants</a>
+                 <a class="dropdown-item" href="http://localhost:5200/Products/Jackets" style="color: white;">Jackets</a>
+                 <a class="dropdown-item" href="http://localhost:5200/Products/Shirts" style="color: white;">Shirts</a>
+               </div>
+           </div>
+        </div>
+     </div>
+  </nav>
+
+<div class="container mb-4" style="margin-top: 120px;">
+  <flash-messages style="text-align: center;"></flash-messages>
+    <h2>Cart</h2>
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        
+                        <tr>
+                            
+                            <th scope="col">Product</th>
+                            <th scope="col">Available</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col" class="text-right">Price</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let cart of carts'>
+                            
+                            <td>{{cart.title}}</td>
+                            <td>In stock</td>
+                            <td>{{cart.quantity}}</td>
+                            <td class="text-right">{{cart.price*cart.quantity | currency : "₹"}}</td>
+                            <td  class="text-right"><a class="btn btn-sm btn-danger" (click)= "deleteCart(cart._id)" href="http://localhost:5200/MyCart/5fcc8faec16e86a8e824321d" style="height: 30px;">Remove</a> </td>
+                        </tr>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            
+
+                       
+                        
+                        <tr >
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Sub-Total</td>
+                            <td class="text-right">₹800</td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>{{totalRows}}</td>
+                            <td><strong>Total</strong></td>
+                            <td class="text-right"><strong>₹800</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                <div class="col-sm-12  col-md-6">
+                    <button class="btn btn btn-light" routerLink="/Home" routerLinkActivate="active" style="background-color: rgb(24, 59, 92);color: white;">Continue Shopping</button>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                   
+                    <p>
+                        
+                        <button class="btn btn-lg btn-block btn-success text-uppercase" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Checkout</button>
+                      </p>
+                      <div class="row">
+                        <div class="col">
+                          <div class="collapse multi-collapse" id="multiCollapseExample1">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="background-color: rgb(24, 59, 92);color: white;width: 200px;">
+                                Add Address
+                              </button>
+                              <h4 style="margin-top: 10px;margin-right: 30px;">Payment:</h4>
+                          <button class="btn btn" (click)="initPay()" style="width: 200px;height:50px;background-color: black;color: white;font-weight: bold;margin-top: 10px;">Razorpay</button>
+                          <div style="margin-top: 20px;">
+                           
+                        </div>
+                        <a class="btn btn-sm   text-uppercase" href="http://localhost:5200/OrderPlaced" style="height: 40px;background-color: rgb(20, 48, 85); color: white;width: 280px;height: 50px;margin-top: 10px;">COD: Cash On Delivery</a>
+                        </div>
+                        </div>
+                        <div class="col">
+                          <div class="collapse multi-collapse" id="multiCollapseExample2">
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: rgb(24, 59, 92);color: white;">
+          <h5 class="modal-title" id="exampleModalLabel" >Add Address</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form #userForm="ngForm" (ngSubmit)="addOrder()"  >
+  
+                <hr />
+                  
+                   <div class="form-group" >
+                    <label>Billing Address</label>
+                    <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" name="name" [(ngModel)]="address"  >
+                  <small [class.d-none]="name.valid || name.untouched">Address Required</small>
+                  </div>
+                
+                  <div class="form-group" >
+                    <label>City</label>
+                    <input type="text" required #d="ngModel" [class.is-invalid]="d.invalid && d.touched" class="form-control" name="d" [(ngModel)]="city"  >
+                  <small [class.d-none]="d.valid || d.untouched">City Required</small>
+                  </div>
+                
+                  <div class="form-group" style="width: 300px;">
+                    <label>State</label>
+                    <input type="text" required #c="ngModel" [class.is-invalid]="c.invalid && c.touched" class="form-control" name="c" [(ngModel)]="state"  >
+                  <small [class.d-none]="c.valid || c.untouched">State Required</small>
+                  </div>
+                
+                  <div class="form-group" style="width: 300px;">
+                    <label>Country</label>
+                    <input type="text" required #p="ngModel" [class.is-invalid]="p.invalid && p.touched" class="form-control" name="p" [(ngModel)]="country"  >
+                  <small [class.d-none]="p.valid || p.untouched">Country Required</small>
+                  </div>
+                 
+                  <div class="form-group" style="width: 200px;">
+                    <label>Pincode</label>
+                    <input type="number"  required #i="ngModel" [class.is-invalid]="i.invalid && i.touched" class="form-control" name="i" [(ngModel)]="pincode"  >
+                  <small [class.d-none]="i.valid || i.untouched">Pincode Required</small>
+                  </div>
+                
+                  
+                  <button class="btn btn-primary" [disabled]='!userForm.valid' type="submit" style="background-color: rgb(24, 59, 92);color: white;">Submit</button>
+                  
+                  
+                 
+                  </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: rgb(24, 59, 92);color: white;">Close</button>
+          
+        </div>
+      </div>
+    </div>
+</div>
+
+
+            
+                
+

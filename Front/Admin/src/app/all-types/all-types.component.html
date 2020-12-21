@@ -1,0 +1,31 @@
+<div class ="container" style="margin-top: 100px;">
+    
+    <h2 style="text-decoration: underline;">CATEGORIES</h2>
+    <br>
+    <br>
+    <a href="/Add/Types" class="btn btn-primary" style="background-color: rgb(31, 61, 105);">Add a new category</a>
+<br><br>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>Category</th>
+            
+            <th>Delete</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+    
+       
+            <tr *ngFor="let type of types">
+                <td>{{type.title}}</td>
+            
+            <td (click)= "deleteType(type._id)"><button class="btn btn-" style="background-color: red;"><a class="confirmDeletion" style="color: black;" href="/All/Types">Delete</a></button></td>
+            
+        </tr>
+      
+    </tbody>
+</table>
+    </div>

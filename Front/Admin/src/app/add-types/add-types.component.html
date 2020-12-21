@@ -1,0 +1,20 @@
+<div class="container-fluid" style="margin-top: 140px;">
+    <h1 style="font-weight: bold;">Add Categories</h1>
+    <form #userForm="ngForm" (ngSubmit)="addType()"  >
+  
+<hr />
+  
+   <div class="form-group" style="width: 300px;">
+    <label style="font-weight: bold;">Title</label>
+    <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" name="name" [(ngModel)]="title"  >
+  <small [class.d-none]="name.valid || name.untouched" style="font-weight: bold;color: red;">Title Required!</small>
+  </div>
+  
+  <button class="btn btn-primary" [disabled]='!userForm.valid' type="submit" style="background-color: rgb(35, 58, 92);">Submit</button>
+  
+  <br><br>
+ 
+  <a  class="btn btn" style="background-color: rgba(22, 50, 82, 0.986);color: white;" href="/All/Types">View Categories</a>
+  </form>
+  </div>
+  <div>
