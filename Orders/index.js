@@ -25,6 +25,9 @@ app.use(allowCrossDomain);
     
 app.use(bodyParser.json());
 app.use( '/', router);
+app.use(express.json());
 
+
+module.exports = app;
  
-app.listen(7000);
+

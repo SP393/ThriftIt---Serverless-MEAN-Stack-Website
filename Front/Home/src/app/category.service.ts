@@ -9,10 +9,10 @@ import {Product} from './Product';
 })
 export class CategoryService {
    
-url= 'http://localhost:5000/Category'
-Url= 'http://localhost:5000/products'
-URL= 'http://localhost:5000/Types'
-orderurl='http://localhost:7000/orders'
+url= 'https://krzqc46hph.execute-api.us-east-1.amazonaws.com/production/Category'
+Url= 'https://krzqc46hph.execute-api.us-east-1.amazonaws.com/production/products'
+URL= 'https://krzqc46hph.execute-api.us-east-1.amazonaws.com/production/Types'
+orderurl='https://gty00n4qd0.execute-api.us-east-1.amazonaws.com/production/orders'
  
   constructor(private http:HttpClient, private webService:WebServiceService) { }
   getCategory(){
@@ -42,20 +42,20 @@ orderurl='http://localhost:7000/orders'
     return this.webService.get(`Cart/${userId}`);
    }
    deleteCart(id){
-    return this.http.delete('http://localhost:5000/Cart/'+id)
+    return this.http.delete('https://uqi9mkm4e7.execute-api.us-east-1.amazonaws.com/production/Cart/'+id)
     //.pipe(map((res:any)=> res.send()));
   }
 
   getCarts(){
-    return this.http.get('http://localhost:5000/Cart')
+    return this.http.get(' https://uqi9mkm4e7.execute-api.us-east-1.amazonaws.com/production/Cart')
   }
   addOrder(newOrder){
     var headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:7000/orders', newOrder ,{headers:headers})
+    return this.http.post('https://gty00n4qd0.execute-api.us-east-1.amazonaws.com/production/orders', newOrder ,{headers:headers})
    }
    getOrder(){
-    return this.http.get('http://localhost:7000/orders')
+    return this.http.get('https://gty00n4qd0.execute-api.us-east-1.amazonaws.com/production/orders')
   }
   
   }

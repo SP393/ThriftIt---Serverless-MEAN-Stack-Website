@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha  --timeout 10000",
-    "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test"
+    "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test",
+    "deploy": "serverless deploy"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-serverless-express": "^3.4.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -23,6 +25,7 @@
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "mocha": "^8.2.1",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "serverless": "^2.19.0"
   }
 }

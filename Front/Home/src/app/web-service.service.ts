@@ -5,7 +5,7 @@ import {HttpClient ,HttpHeaders} from '@angular/common/http';
   providedIn: 'root'
 })
 export class WebServiceService {
-url= 'http://localhost:5000';
+url= 'https://krzqc46hph.execute-api.us-east-1.amazonaws.com/production';
   constructor(private http: HttpClient) { }
   get(uri: string){
     return this.http.get(`${this.url}/${uri}`);

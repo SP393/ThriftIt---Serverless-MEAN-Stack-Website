@@ -12,7 +12,7 @@ export class AddCategoryService {
 
   constructor(private http: HttpClient) { }
   getCategory(){
-    return this.http.get('http://localhost:5000/Category')
+    return this.http.get('https://krzqc46hph.execute-api.us-east-1.amazonaws.com/production/Category')
     //.pipe(map((res:any)=> res.send()));
     
   }
@@ -20,19 +20,19 @@ export class AddCategoryService {
   {
   var headers = new HttpHeaders();
   headers.append('Content-Type', 'application/json');
-  return this.http.post('http://localhost:5000/Category', newCategory ,{headers:headers})
+  return this.http.post('https://krzqc46hph.execute-api.us-east-1.amazonaws.com/production/Category', newCategory ,{headers:headers})
   //.pipe(map((res:any)=> res.send()));
   }
   deleteCategory(id){
-    return this.http.delete('http://localhost:5000/Category/'+id)
+    return this.http.delete('https://krzqc46hph.execute-api.us-east-1.amazonaws.com/production/Category/'+id)
     //.pipe(map((res:any)=> res.send()));
   }
   editCategory(id,data){
-    return this.http.put('http://localhost:5000/Category/'+id ,data)
+    return this.http.put('https://krzqc46hph.execute-api.us-east-1.amazonaws.com/production/Category/'+id ,data)
    }
 
    getType(){
-    return this.http.get('http://localhost:5000/Types')
+    return this.http.get('https://krzqc46hph.execute-api.us-east-1.amazonaws.com/production/Types')
     //.pipe(map((res:any)=> res.send()));
     
   }
@@ -40,14 +40,14 @@ export class AddCategoryService {
   {
   var headers = new HttpHeaders();
   headers.append('Content-Type', 'application/json');
-  return this.http.post('http://localhost:5000/Types', newType ,{headers:headers})
+  return this.http.post('https://krzqc46hph.execute-api.us-east-1.amazonaws.com/production/Types', newType ,{headers:headers})
   //.pipe(map((res:any)=> res.send()));
   }
   deleteType(id){
-    return this.http.delete('http://localhost:5000/Types/'+id)
+    return this.http.delete('https://krzqc46hph.execute-api.us-east-1.amazonaws.com/production/Types/'+id)
     //.pipe(map((res:any)=> res.send()));
   }
   editType(id,data){
-    return this.http.put('http://localhost:5000/Types/'+id ,data)
+    return this.http.put('https://krzqc46hph.execute-api.us-east-1.amazonaws.com/production/Types/'+id ,data)
    }
 }

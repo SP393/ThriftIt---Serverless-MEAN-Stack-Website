@@ -14,8 +14,8 @@
       <span class="icon-bar"></span>
     </button>
     <div class="dropdown-menu" style="background-color:rgb(25, 54, 92) ;color: white;height: 150px;">
-      <a class="dropdown-item"  href="http://localhost:5200/myOrders/5fcc8faec16e86a8e824321d" style="color: white;">My Orders</a>
-      <a class="dropdown-item" href="http://localhost:5200/myProfile/5fd9f98f32faf8cedd847be0"  style="color: white;" >My Profile</a>
+      <a class="dropdown-item"  href="http://shopping-cart-case-study.s3-website-us-east-1.amazonaws.com/myOrders/5fcc8faec16e86a8e824321d" style="color: white;">My Orders</a>
+      <a class="dropdown-item" href="http://shopping-cart-case-study.s3-website-us-east-1.amazonaws.com/myProfile/5fd9f98f32faf8cedd847be0"  style="color: white;" >My Profile</a>
       
     </div>
   </div>
@@ -52,13 +52,13 @@
               
               <a class="nav-link" style="cursor: pointer;" *ngIf="auth.Adminlog()" (click)="auth.logout()" routerLink="/Home" routerLinkActivate="active" style="color:rgb(209, 202, 202);">Logout </a>
               <a class="nav-link" style="cursor: pointer;" *ngIf="auth.Adminlog()"  style="color:rgb(209, 202, 202);"> </a>
-              <a  href="http://localhost:5200/MyCart/5fcc8faec16e86a8e824321d" style="color: rgb(209, 202, 202);margin-left: 10px;margin-top: 5px;"><svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <a  href="http://shopping-cart-case-study.s3-website-us-east-1.amazonaws.com/MyCart/5fcc8faec16e86a8e824321d" style="color: rgb(209, 202, 202);margin-left: 10px;margin-top: 5px;"><svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
               </svg><span class="badge badge-danger" >{{totalRows}}</span></a>
 <a class="nav-link" style="cursor: pointer;" *ngIf="_auth.AdminloggedIn()" (click)="_auth.Adminlogout()" routerLink="/Home" routerLinkActivate="active" style="color: rgb(209, 202, 202)" >Logout</a>
 
     <a class="nav-link" *ngIf="!auth.Adminlog() && !_auth.AdminloggedIn()" routerLink="/Admin/login" routerLinkActivate="active" style="color:rgb(209, 202, 202);margin-left: 10px;">Admin</a>
-    <a class="nav-link" style="cursor: pointer;" *ngIf="_auth.AdminloggedIn()"  href="http://localhost:4200/All/Types"  style="color: rgb(209, 202, 202)" >Admin</a>
+    <a class="nav-link" style="cursor: pointer;" *ngIf="_auth.AdminloggedIn()"  href="http://shopping-cart-case-study-admin.s3-website-us-east-1.amazonaws.com/All/Types"  style="color: rgb(209, 202, 202)" >Admin</a>
             </ul>
         </div>
       </div>

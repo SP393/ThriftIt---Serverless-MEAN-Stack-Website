@@ -6,8 +6,8 @@ import {Router} from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
- registerUrl = "http://localhost:8000/Register";
- loginUrl = "http://localhost:8000/login"
+ registerUrl = "https://umjz5uvjb0.execute-api.us-east-1.amazonaws.com/production/Register";
+ loginUrl = "https://umjz5uvjb0.execute-api.us-east-1.amazonaws.com/production/login"
 
   constructor(private http: HttpClient, private router: Router) { }
 registerUser(user){
@@ -32,6 +32,6 @@ loginUser(user){
  }
 
  getUser(id:string){
-  return this.http.get(`http://localhost:8000/Register/${id}`);
+  return this.http.get(`https://umjz5uvjb0.execute-api.us-east-1.amazonaws.com/production/Register/${id}`);
  }
 }

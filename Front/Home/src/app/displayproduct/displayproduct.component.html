@@ -68,10 +68,10 @@
        
              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: 400px;width: 700px;text-align: center;background-color: rgb(15, 15, 15);color: rgb(216, 202, 9);font-weight: bolder;">
                
-               <a class="dropdown-item" href="http://localhost:5200/Products/Tops" style="color: white;">Tops</a>
-               <a class="dropdown-item" href="http://localhost:5200/Products/Dresses" style="color: white;">Dresses</a>
-               <a class="dropdown-item" href="http://localhost:5200/Products/Jeans" style="color: white;">Jeans</a>
-               <a class="dropdown-item" href="http://localhost:5200/Products/Sweaters" style="color: white;">Sweaters</a>
+               <a class="dropdown-item" href="http://shopping-cart-case-study.s3-website-us-east-1.amazonaws.com/Products/Tops" style="color: white;">Tops</a>
+               <a class="dropdown-item" href="http://shopping-cart-case-study.s3-website-us-east-1.amazonaws.com/Products/Dresses" style="color: white;">Dresses</a>
+               <a class="dropdown-item" href="http://shopping-cart-case-study.s3-website-us-east-1.amazonaws.com/Products/Jeans" style="color: white;">Jeans</a>
+               <a class="dropdown-item" href="http://shopping-cart-case-study.s3-website-us-east-1.amazonaws.com/Products/Sweaters" style="color: white;">Sweaters</a>
              </div>
          </div>
          <div class="nav-item ">
@@ -82,10 +82,10 @@
        
              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: 400px;width: 700px;text-align: center;background-color: rgb(15, 15, 15);color: rgb(216, 202, 9);font-weight: bolder;">
                
-               <a class="dropdown-item" href="http://localhost:5200/Products/T-shirts" style="color: white;">T-shirts</a>
-               <a class="dropdown-item" href="http://localhost:5200/Products/Pants" style="color: white;">Pants</a>
-               <a class="dropdown-item" href="http://localhost:5200/Products/Jackets" style="color: white;">Jackets</a>
-               <a class="dropdown-item" href="http://localhost:5200/Products/Shirts" style="color: white;">Shirts</a>
+               <a class="dropdown-item" href="http://shopping-cart-case-study.s3-website-us-east-1.amazonaws.com/Products/T-shirts" style="color: white;">T-shirts</a>
+               <a class="dropdown-item" href="http://shopping-cart-case-study.s3-website-us-east-1.amazonaws.com/Products/Pants" style="color: white;">Pants</a>
+               <a class="dropdown-item" href="http://shopping-cart-case-study.s3-website-us-east-1.amazonaws.com/Products/Jackets" style="color: white;">Jackets</a>
+               <a class="dropdown-item" href="http://shopping-cart-case-study.s3-website-us-east-1.amazonaws.com/Products/Shirts" style="color: white;">Shirts</a>
              </div>
          </div>
       </div>
@@ -99,7 +99,7 @@
       <div class="row "  >
         <div class="col-3" *ngFor=" let product of products" >
           <div class="card mb-4 shadow-sm">
-           <a href="http://localhost:5200/Details/5fcc8faec16e86a8e824321d/{{product._id}}/{{product.title}}/{{product.desc}}/{{product.price}}"><img class="card-img-top" src="{{product.image}}" alt=""></a>
+           <a href="http://shopping-cart-case-study.s3-website-us-east-1.amazonaws.com/Details/5fcc8faec16e86a8e824321d/{{product._id}}/{{product.title}}/{{product.desc}}/{{product.price}}"><img class="card-img-top" src="{{product.image}}" alt=""></a>
             <div class="card-body" style="height: 100px;">
               <p class="card-text" style="font-weight: bold;">{{product.title}}</p>
               
