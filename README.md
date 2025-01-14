@@ -3,9 +3,7 @@
 ThriftIt is a modern, serverless e-commerce platform for clothing, built with the MEAN stack and deployed on AWS. It provides a seamless shopping experience with user pages, admin management, and secure payment integration using PayPal.
 
 ---
-
-https://github.com/user-attachments/assets/4e12ddd3-ffde-458b-bdb5-db59fb2ed24e
-
+https://github.com/user-attachments/assets/3684b1f7-9ae0-400e-8bcc-51b7da87d1a6
 
 ## Features
 
